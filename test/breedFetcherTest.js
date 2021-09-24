@@ -18,13 +18,11 @@ describe('fetchBreedDescription', () => {
     });
   });
 
-  it('should test the scenario where an invalid/non-existent breed is passed in', (done) => {
+  it('displays invalid/non-existent breed has been passed in', (done) => {
     fetchBreedDescription('invalid breed', (err, desc) => {
-      // we expect no error for this scenario
-      assert.equal(err, null);
-
-      // compare returned description
-      assert.equal(err, desc);
+  
+      const invalidCase = "breed is invalid/non-existent";
+      assert.equal(err, invalidCase);
 
       done();
     });
